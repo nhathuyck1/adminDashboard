@@ -7,10 +7,11 @@ import {
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 const { Header, Content, Sider } = Layout;
-const items1 = ["1", "2", "3"].map((key) => ({
-  key,
-  label: `nav ${key}`,
-}));
+const items1 = [
+  {
+    label: "Admin",
+  },
+];
 const items2 = [
   {
     key: "sub1",
