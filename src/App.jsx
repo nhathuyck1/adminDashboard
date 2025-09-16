@@ -4,6 +4,7 @@ import ManageOrder from "./page/order";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ManageCustomer from "./page/customer";
 import RentingManagement from "./page/renting";
+import HomePage from "./components/homepage";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +29,10 @@ function App() {
           element: <RentingManagement />,
         },
       ],
+    },
+    {
+      path: "/homePage",
+      element: <HomePage />,
     },
   ]);
   return (
