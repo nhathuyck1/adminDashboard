@@ -11,6 +11,10 @@ const items1 = [
   {
     label: "Admin",
   },
+  {
+    label: "Back to HomePage",
+    key: "backHomePage",
+  },
 ];
 const items2 = [
   {
@@ -62,6 +66,9 @@ const AD = () => {
     if (e.key === "renting") {
       navigate("/renting");
     }
+    if (e.key === "backHomePage") {
+      navigate("/homePage");
+    }
   };
   return (
     <Layout>
@@ -72,6 +79,7 @@ const AD = () => {
           mode="horizontal"
           defaultSelectedKeys={["2"]}
           items={items1}
+          onClick={handleMenuClick}
           style={{ flex: 1, minWidth: 0 }}
         />
       </Header>
