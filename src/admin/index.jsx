@@ -20,6 +20,7 @@ const items2 = [
     children: [
       { key: "car", label: "Manage Car" },
       { key: "order", label: "Manage Order" },
+      { key: "customer", label: "Manage Customer" },
     ],
   },
   {
@@ -27,23 +28,23 @@ const items2 = [
     icon: React.createElement(LaptopOutlined),
     label: "Statistics",
     children: [
-      { key: "opt3", label: "option3" },
+      { key: "renting", label: "Renting" },
       { key: "opt4", label: "option4" },
     ],
   },
   {
     key: "sub3",
     icon: React.createElement(NotificationOutlined),
-    label: "subnav 3",
+    label: "Notification",
     children: [
       { key: "opt5", label: "option5" },
       { key: "opt6", label: "option6" },
     ],
   },
 ];
-const ad = () => {
-  const navigate = useNavigate();
 
+const AD = () => {
+  const navigate = useNavigate();
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -54,6 +55,12 @@ const ad = () => {
     }
     if (e.key === "order") {
       navigate("/order");
+    }
+    if (e.key === "customer") {
+      navigate("/customer");
+    }
+    if (e.key === "renting") {
+      navigate("/renting");
     }
   };
   return (
@@ -100,4 +107,4 @@ const ad = () => {
     </Layout>
   );
 };
-export default ad;
+export default AD;
